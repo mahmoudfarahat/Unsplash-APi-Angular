@@ -1,4 +1,7 @@
-<button (click)="generate()">Show</button>
+<div>
+
+<button (click)="generate()" >Show</button>
+</div>
 
 
-<img [src]="url" alt="">
+<img *ngIf="url" [src]="url" alt="">

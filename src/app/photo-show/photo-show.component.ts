@@ -9,7 +9,7 @@ import { PhotosService } from '../photos.service';
 export class PhotoShowComponent implements OnInit {
 url =''
   constructor(private photosService:PhotosService){
-
+this.getPhoto()
   }
 
 ngOnInit(): void {
@@ -17,6 +17,10 @@ ngOnInit(): void {
 }
 
 generate(){
+  this.getPhoto()
+}
+
+getPhoto(){
   this.photosService.getPhoto().subscribe(( url) => {
     this.url = url
    })
